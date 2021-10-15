@@ -25,12 +25,18 @@
     </ul>
 </div>
 
-<div class="column">
-<img src="img/plot6.png" alt="Plot with ggplot2">
+<div class="column" style="padding-left:30px">
+<img src="img/plot6.png" alt="Plot with ggplot2" width=90%>
 </div>
-<div class ="column">
+
+<div class="column">
+   <p>
+    Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California fips == "06037". Which city has seen greater changes over time in motor vehicle emissions?
+  </p>
+  <button type="button" class="collapsible">Click for the code</button>
+<div class="content2">
 <pre>
-<code style = "word-wrap: break-word;">
+<code>
   #read data
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
@@ -55,6 +61,27 @@ dev.off()
   </code>
 </pre>
 </div>
+
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
 </body>
 </html>
 
