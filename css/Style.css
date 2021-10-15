@@ -1,11 +1,15 @@
-body {
+body.homepage {
   background: linear-gradient(-45deg, #0d0d0d, #333333, #75b8a2, #c9d9d2);
   background-size: 500% 500%;
   animation: gradient 15s ease infinite;
-  color: white;
+  text-align: center;
+  
+}
+body {
+  background-color: #0d0d0d;
+  color:white;
   font-family: Helvetica, serif;
   font-size: 20px;
-  
 }
 @keyframes gradient {
     0% {
@@ -18,9 +22,7 @@ body {
         background-position: 0% 50%;
     }
 }
-.homepage {
-  text-align: center;
-}
+
 ul.bar {
   list-style-type: none;
   margin: 0;
@@ -66,18 +68,28 @@ h1 {
   padding-bottom: 100px;
 }
 
+.aboutme {
+  padding:20px 50px;
+}
+.aboutme h2 {
+  padding-top: 20px;
+}
+
+.content {
+  padding: 20px 50px;
+}
+
 .container {
   position: relative;
-  width: 90%;
-  height: 100vh;
+  width: 100%;
+  height: 97vh;
   overflow: auto;
-  margin: 70px;
+  scroll-snap-type: y mandatory;
 }
 .container .section {
   position: relative: ;
   width: 100%;
   height:  100%;
-  padding: 20px 20px 0px 20px;
   scroll-snap-align:  start;
   background-blend-mode: multiply;
 }
@@ -88,47 +100,15 @@ h1 {
 
 }
 .container .section:nth-child(2){
-  background: rgba(1, 54, 73, 0.3) ;
+  background: rgba(24, 75, 95, 0.3);
   background-size: cover; 
   background-attachment: fixed;
 }
 .container .section:nth-child(3){
-  background: rgba(24, 75, 95, 0.3);
-  background-size: cover;
-  background-attachment: fixed;
-}
-.container .section:nth-child(4){
-  background: rgba(140, 140, 140, 0.3);
   background-size: cover;
   background-attachment: fixed;
 }
 
-.container .section .content h2{
-  background: #fff;
-  color: #111;
-  font-weight: 600;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 2em;
-}
-
-img.gallery {
-   margin: 5px;
-  border: 1px solid #ccc;
+.column {
   float: left;
-  height: 300px;
-}
-
-.project {
-  float: left;
-  margin: 5px;
-  width: 100px;
-  padding: 50px;
-}
-.project img {
-  width:  100%;
-  height: 100px;
-}
-.descrip {
-  text-align: center;
-}
+  width: 40%;}
