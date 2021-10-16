@@ -4,7 +4,7 @@
 <head>
   <title> ThuHien | Home </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/StyleForP.css">
   <script src="https://kit.fontawesome.com/4a6d711d0a.js" crossorigin="anonymous"></script>
   <meta name="Keywords" content="Python, SQL, CSS, HTML, R">
   <meta name="description" content="Things that I have learned">
@@ -16,7 +16,7 @@
 <div>
     <ul class="bar">
       <li> <img class="myphoto" src="img/me.jpg" alt="My photo" width="50px"> </li>
-      <li><a href= "index.html" style="font-size: 24px">ThuHien</a></li>
+      <li><a href= "index.html" style="font-size:24px">ThuHien</a></li>
       <div class="rightbar">
       <li><a href=aboutme.html>ABOUT ME</a></li>
       <li><a href=#>PROJECTS</a></li>
@@ -25,63 +25,72 @@
     </ul>
 </div>
 
-<div class="row">
-<div class="pcolumn">
-<img src="img/plot6.png" alt="Plot with ggplot2" width=70%>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext column">1 / 3</div>
+    <img src="img/plot6.png" style="height:400px">
+    <div class="column">
+      <h3>ggplot Library</h3>
+      <p>
+       Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California fips == "06037". Which city has seen greater changes over time in motor vehicle emissions?
+     </p>
+   </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext column">2 / 3</div>
+    <img src="img/plot4.png" style="height:400px">
+    <div class="column">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext column">3 / 3</div>
+    <img src="img/plot3.png" style="height:400px">
+    <div class="column">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+<br>
 
-<div class="pcolumn">
-  <h3>ggplot Library</h3>
-   <p>
-    Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in Los Angeles County, California fips == "06037". Which city has seen greater changes over time in motor vehicle emissions?
-  </p>
-  <button type="button" class="collapsible">Click for the code</button>
-<div class="content2">
-<pre>
-<code>
-  #read data
-NEI <- readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
-
-#filter the data of Baltimore City (fips == "24510") and Los Angeles County, California (fips == "06037") 
-# with emissions from motor vehicle sources 
-fip <- c("24510", "06037")
-Bal_Los_motor <- NEI[NEI$fips %in% fip & NEI$type =="ON-ROAD",]
-#calculate the total emissions of each year
-total_motor <- aggregate(Emissions ~ year + fips, Bal_Los_motor, sum)
-
-library(ggplot2)
-#plot
-ggplot(total_motor, aes(year, Emissions, col = fips)) +
- geom_point() + geom_line() +  labs(title = "PM2.5 Emissions from motor vehicle source in Baltimore and Los Angeles ") +
- scale_colour_discrete(name = "City", labels = c("Los Angeles", "Baltimore")) +
- theme_bw(base_family = "Times")
-
-#save to file png
-dev.copy(png, file="plot6.png", width=600, height=480 )
-dev.off()
-  </code>
-</pre>
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-
-</div>
-</div>
-
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
