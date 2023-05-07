@@ -10,6 +10,54 @@
   <meta name="description" content="Things that I have learned">
   <meta name="viewport" context="width=device-width, initial-scale=1.0">
   <meta name="author" content="Nguyen Thi Thu Hien">
+    <style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 </head>
 
 <body>
@@ -17,6 +65,8 @@
       <li> <img class="myphoto" src="img/me.jpg" alt="My photo" width="50px"> </li>
       <li><a href=# style="font-size: 24px">ThuHien</a></li>
       <div class="rightbar">
+       <li><a href=ubermich.html>ÜBER MICH</a></li>
+       <li><a href="fotos.html">FOTOS</a></li>
       <li><a a href="mailto:nguyen.tth@web.de">CONTACT</a></li>
       </div>
     </ul>
@@ -29,20 +79,7 @@
     <h2>
     Wirtschaftsinformatik-Absolventin, IT-Trainee, Mathlover, Reisende, Hobbyköchin
     </h2>
-  
-    <h2> ÜBER MICH </h2>
-            <p>I'm Hien, I'm currently studying Business Information Systems in Muenster, Germany. </p> 
-            <p> I'm seeking for a 3 to 6-month internship program which helps me to utilize the knowledge and passion for data science and collect experiences in working environment. </p> 
-            <p>I consider myself a hardworking, motivated self-learner.
 
-
-   <h2>Meine Hobbys</h2>
-        <ul style="padding-bottom: 50px;"> 
-        <li> Kochen.</li>
-        <li> Basteln. </li>
-        <li> Reisen.</li>
-        <li> Bücher lesen. </li> 
-        </ul>
 
 
     <div class="contact">
