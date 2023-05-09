@@ -2,7 +2,7 @@ body {
   background-color: #0d0d0d;
   color:white;
   font-family: Helvetica, serif;
-  font-size: 18px;
+  font-size: 20px;
   padding: 100px  50px;
 }
 
@@ -13,7 +13,7 @@ header {
   text-align: center;
   color:white;
   font-family: Helvetica, serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 @keyframes gradient {
