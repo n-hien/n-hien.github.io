@@ -3,6 +3,7 @@ body {
   color:white;
   font-family: Helvetica, serif;
   font-size: 18px;
+  padding: 100px  50px;
 }
 
 header {
@@ -59,7 +60,7 @@ border-radius:50%;
 
 h3 {
   padding-top:10px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .item {
@@ -74,6 +75,4 @@ h3 {
 
 .w3-wide{letter-spacing:4px}
 
-.content {
-    padding: 1000px  50px;
-}
+
