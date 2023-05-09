@@ -1,7 +1,8 @@
 body {
-  background: whitesmoke;
+  background-color: #0d0d0d;
+  color:white;
   font-family: Helvetica, serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 header {
@@ -11,7 +12,7 @@ header {
   text-align: center;
   color:white;
   font-family: Helvetica, serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @keyframes gradient {
@@ -74,5 +75,5 @@ h3 {
 .w3-wide{letter-spacing:4px}
 
 .content {
-    padding: 14px  16px;
+    padding: 1000px  50px;
 }
