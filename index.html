@@ -10,7 +10,54 @@
   <meta name="description" content="Things that I have learned">
   <meta name="viewport" context="width=device-width, initial-scale=1.0">
   <meta name="author" content="Nguyen Thi Thu Hien">
-  
+   <style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 </head>
 
 <body>
@@ -35,7 +82,8 @@
   </header>
   <div style="padding-left: 70px;padding-right: 70px;">
    <h3 class="w3-tag w3-wide"> Über mich </h3>
-            <p> Mein Name ist Hien Nguyen. Ich habe Wirtschaftsinformatik an der Universität Münster studiert. Ich arbeite neben dem Studium als Werkstudentin bei einer Immobilienbank in Münster und beginne im Juli als IT-Trainee bei der Bank am Standort in Hamburg zu arbeiten. </p> 
+            <p> Mein Name ist Hien Nguyen. Ich habe Wirtschaftsinformatik an der Universität Münster studiert. 
+              Ich beginne ab Juli als IT-Trainee in einer Bank in Hamburg zu arbeiten. </p> 
             <p> Am Sonntag arbeite ich ehrenamtlich in einer öffentlichen Bücherei. </p> 
             <p> Ich bin eine ordentliche und verantwortungsbewusste Person, die stets darauf achtet, dass die Wohnung in einwandfreiem Zustand gehalten wird.  </p> 
             <p>  Ich bin Nichtraucherin und habe keine Haustiere. </p> 
@@ -46,8 +94,39 @@
         <li> Kochen.</li>
         <li> Basteln. </li>
         <li> Reisen.</li>
-        <li> Bücher lesen. </li> 
+        <li> Joggen. </li> 
+        <li> Fahrrad fahren. </li>
+        <li> Neue Dinge kernenlernen. </li> 
+        
         </ul>
+    <h3 class="w3-tag w3-wide">Fotos</h3>
+    <div class="responsive">
+  <div class="gallery">
+     <img src="img/me1.jpg" alt="Me" height="400">
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+     <img src="img/me3.jpg" alt="Mountains" height="400">
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+  
+<div class="responsive">
+  <div class="gallery">
+     <img src="img/me2.jpg" alt="Me" height="400">
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+     <img src="img/me4.jpg" alt="Mountains" height="400">
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 </div>
 </body>
 </html>
